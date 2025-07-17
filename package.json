@@ -1,0 +1,11 @@
+{
+  "name": "node_simple_server_for_k8s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
