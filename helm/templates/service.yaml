@@ -9,5 +9,5 @@ spec:
   ports:
     - name: helm-service
       port: 80
-      nodePort: { { .Values.port } }
+      nodePort: {{.Values.port}}
       targetPort: 3000

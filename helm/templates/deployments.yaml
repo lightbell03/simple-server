@@ -5,7 +5,7 @@ metadata:
   labels:
     app: simple-server-helm-deploy
 spec:
-  replicas: { { .Values.replicaCount } }
+  replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
       app: simple-server-dep
