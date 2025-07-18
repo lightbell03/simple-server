@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-server-deployment
+  labels:
+    app: simple-server-helm-deploy
+spec:
+  replicas: { { .Values.replicaCount } }
+  selector:
+    matchLabels:
+      app: simple-server-dep
+  template:
+    metadata:
+      labels:
+        app: simple-server-dep
+    spec:
+      containers:
+        - name: simple-server
+          image: bell28/simple-server
+          ports:
+            - containerPort: 3000

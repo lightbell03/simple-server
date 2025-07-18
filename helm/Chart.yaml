@@ -1,0 +1,4 @@
+apiVersion: v1
+name: simple-chart
+version: 0.0.1
+description: "테스트 helm chart"
