@@ -5,9 +5,10 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: simple-server-helm-deploy
+    app: simple-server-dep
   ports:
-    - name: helm-service
+    - name: helm-service-port
       port: 80
       nodePort: {{.Values.port}}
       targetPort: 3000
+      protocol: TCP
