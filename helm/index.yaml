@@ -2,11 +2,11 @@ apiVersion: v1
 entries:
   simple-chart:
   - apiVersion: v1
-    created: "2025-07-18T15:44:23.4499024+09:00"
+    created: "2025-07-21T10:54:21.2031412+09:00"
     description: 테스트 helm chart
-    digest: 517e2d9de516a26b4dacce34a59cb39b26bccdd5dc33f3128e72ca1a5c27364f
+    digest: 56c2874b116b38191ae1390b5c77b78219c5ef8ab6c1323f803f1978276182fb
     name: simple-chart
     urls:
     - https://lightbell03.github.io/simple-server/helm/simple-chart-0.0.1.tgz
     version: 0.0.1
-generated: "2025-07-18T15:44:23.4487947+09:00"
+generated: "2025-07-21T10:54:21.2020308+09:00"
