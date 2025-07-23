@@ -1,0 +1,37 @@
+expose:
+  type: ingress
+  tls:
+    enable: false
+  ingress:
+    hosts:
+      core: local.simple-harbor.com
+    # 테스트 용으로 ssl 을 사용하지 않을 예정
+    # 운영에서는 반드시 ssl 설정이 필수
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    className: nginx
+
+# https://local.simple-harbor.com:31057
+externalURL: http://local.simple-harbor.com:30298
+persistence:
+  enable: true
+  persistentVolumeClaim:
+    registry:
+      existingClaim: "harbor-registry-pvc"
+      storageClass: "nfs-sc"
+    jobservice:
+      jobLog:
+        existingClaim: "harbor-job-service-pvc"
+        storageClass: "nfs-sc"
+    database:
+      existingClaim: "harbor-database-pvc"
+      storageClass: "nfs-sc"
+    redis:
+      existingClaim: "harbor-redis-pvc"
+      storageClass: "nfs-sc"
+    trivy:
+      existingClaim: "harbor-trivy-pvc"
+      storageClass: "nfs-sc"
+
+harborAdminPassword: "password"
